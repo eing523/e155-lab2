@@ -1,7 +1,9 @@
 // Emily Ing
 // eing@g.hmc.edu
-// Date of creation: 9/5/2026
+// Date of creation: 9/12/2026
 // Summary: Module for E155 Lab 1, which contains the counter that blinks led[2].
+
+// include a number that is showing the count increasing every time
 
 module lab1_counter_ei #(parameter MAXCOUNT = 10_000_000, parameter WIDTH = 25)(
 	input  logic clk,

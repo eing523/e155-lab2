@@ -1,6 +1,6 @@
 // Emily Ing
 // eing@g.hmc.edu
-// Date of creation: 9/5/2026
+// Date of creation: 9/12/2026
 // Summary: Top module used to instantiate modules plus the switch-to-LED assign logic.
 
 module lab1_ei(
