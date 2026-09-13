@@ -1,0 +1,20 @@
+----------------------------------------------------------------------
+Report for cell lab2_ei.TECH
+Register bits:  0 of 5280 (0.000%)
+I/O cells:      19
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                         HSOSC_CORE         1          100.0
+                                 IB         8          100.0
+                               LUT4        10          100.0
+                                 OB        11          100.0
+SUB MODULES
+                 lab2_7_seg_decoder         1
+                              TOTAL        31
+----------------------------------------------------------------------
+Report for cell lab2_7_seg_decoder.v1
+Instance Path : lab2_7_seg_decoder_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7           70.0
+                              TOTAL         7

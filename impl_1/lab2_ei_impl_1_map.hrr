@@ -1,0 +1,18 @@
+---------------------------------------------------
+Report for cell lab2_ei
+   Instance path: lab2_ei
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11        100.0
+                               LUTGATE	         11        100.0
+                                 IOBUF	         19        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    lab2_7_seg_decoder	          1        63.6
+---------------------------------------------------
+Report for cell lab2_7_seg_decoder
+   Instance path: lab2_ei/lab2_7_seg_decoder_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7        63.6
+                               LUTGATE	          7        63.6
