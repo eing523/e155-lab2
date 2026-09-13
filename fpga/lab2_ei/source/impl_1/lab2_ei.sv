@@ -4,43 +4,43 @@
 // Summary: Top module used to instantiate modules plus the switch-to-LED assign logic.
 
 module lab2_ei(
-	input  logic [3:0] s, // DIP switches
-	input  logic       reset,
+	input  logic       nreset,
+	input  logic [3:0] sw1,
+	input  logic [3:0] sw2,
+	input  logic [3:0] col,
 	output logic [6:0] seg,
 	output logic [2:0] led,
 	output logic       clk
 );
-		
+	
+	logic clk_new = 0;
+	logic counter = 0;
+    logic [3:0] s; // DIP switches
+	logic [1:0] power; // determines power
+	
 	// Internal high-speed oscillator
 	HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
+	
+	// Instantiate counter module
+	lab2_counter lab2_counter_inst (.clk(clk), .nreset(nreset), .enable(1'b1), .counter(counter), .clk_new(clk_new));
+	
+	// Instantiate scanning module
+	lab2_scanning lab2_scanning_inst(.row(row));
+	
+	
+	// column to led assign
+	assign led[3] = (col == 4'b0111);
+	assign led[2] = (col == 4'b1011);
+	assign led[1] = (col == 4'b1101);
+    assign led[0] = (col == 4'b1110);
+
+	// power mux
+	assign power = (clk_new == 1'b0) ? 2'b10 : 2'b01;
+	
+	// switch mux
+	assign s = (clk_new == 1'b0) ? sw1 : sw2;
 	
 	// Instantiate seven-segment display decoder module
 	lab2_7_seg_decoder lab2_7_seg_decoder_inst(s, seg);
 	
-	// Instantiate scanning module
-	lab2_scanning lab2_scanning_inst();
-
-// Simple clock divider
-	always_ff @(posedge clk) begin
-		if (!nreset) begin // 0 = high and 1 = low.
-				counter <= 0;
-				count_state <= 0;
-				clk_state <= 0;
-			end	
-   // Choosing a max count of 400,000 due to calculations of 48 mHz/120 Hz	
-		else if (enable) begin
-			if (counter >= MAXCOUNT - 1) begin
-					counter <= 0;
-					count_state <= count_state + 1; // adding to count each cycle
-					clk_state <= ~clk_state; // toggles the new clock
-				end
-			else begin
-					counter <= counter + 1;
-\				end
-			end
-		else begin
-				counter <= counter + 0;
-			end
-		end
-
 endmodule

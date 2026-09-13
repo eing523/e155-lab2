@@ -3,13 +3,11 @@
 // Date of creation: 9/12/2026
 // Summary: Module for E155 Lab 2, which contains the counter.
 
-// include a number that is showing the count increasing every time
-
 module lab2_counter #(parameter MAXCOUNT = 12_000_000, parameter WIDTH = 25)(
 	input  logic clk,
 	input  logic nreset,
 	input  logic enable,
-	output logic clk_new
+	output logic clk_new,
 	output logic [WIDTH-1:0] counter
 );
 	
@@ -30,10 +28,10 @@ module lab2_counter #(parameter MAXCOUNT = 12_000_000, parameter WIDTH = 25)(
 				end
 			else begin
 					count_state <= count_state + 1'b1;
-\				end
+				end
 			end
 		else begin
-				counter <= counter + 0;
+				count_state <= count_state + 0;
 			end
 		end
 		
