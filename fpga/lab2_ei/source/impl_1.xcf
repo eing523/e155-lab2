@@ -18,13 +18,14 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>../../impl_1/lab1_ei_impl_1.bin</File>
-			<FileTime>09/08/26 23:31:52</FileTime>
-			<JedecChecksum>0x0388</JedecChecksum>
+			<File>../../impl_1/lab2_ei_impl_1.bin</File>
+			<FileTime>09/14/26 01:39:16</FileTime>
+			<JedecChecksum>0xD280</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
+				<SVFProcessor>SVF Processor</SVFProcessor>
 				<AccessMode>Direct Programming</AccessMode>
 			</Option>
 			<FPGALoader>
@@ -48,7 +49,8 @@
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
 						<IOState>HighZ</IOState>
-						<IOVectorData>0</IOVectorData>
+						<IOVectorData>`</IOVectorData>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 						<AccessMode>Direct Programming</AccessMode>
 					</Option>
 				</Device>
@@ -62,7 +64,7 @@
 					<IDCode>0x15</IDCode>
 					<Package>208mil 8-pin SOIC</Package>
 					<Operation>Erase,Program,Verify</Operation>
-					<File>../../impl_1/lab1_ei_impl_1.bin</File>
+					<File>../../impl_1/lab2_ei_impl_1.bin</File>
 					<AddressBase>0x00000000</AddressBase>
 					<EndAddress>0x00010000</EndAddress>
 					<DeviceSize>32</DeviceSize>
@@ -75,14 +77,15 @@
 				<Device>
 					<Pos>1</Pos>
 					<Name></Name>
-					<File>C:/Users/eing/Documents/GitHub/e155-lab1/fpga/lab1_ei/impl_1/lab1_ei_impl_1.bin</File>
+					<File>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/lab2_ei_impl_1.bin</File>
 					<LocalChainList>
 						<LocalDevice index="-99"
 							name="Unknown"
-							file="C:/Users/eing/Documents/GitHub/e155-lab1/fpga/lab1_ei/impl_1/lab1_ei_impl_1.bin"/>
+							file="C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/lab2_ei_impl_1.bin"/>
 					</LocalChainList>
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 					</Option>
 				</Device>
 			</FPGADevice>

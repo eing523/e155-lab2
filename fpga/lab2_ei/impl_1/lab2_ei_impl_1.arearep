@@ -1,20 +1,32 @@
 ----------------------------------------------------------------------
 Report for cell lab2_ei.TECH
-Register bits:  0 of 5280 (0.000%)
-I/O cells:      19
+Register bits:  29 of 5280 (0.549%)
+I/O cells:      27
                                   Cell usage:
                                cell     count   Res Usage(%)
+                               CCU2        15          100.0
+                            FD1P3XZ        29          100.0
                          HSOSC_CORE         1          100.0
-                                 IB         8          100.0
-                               LUT4        10          100.0
-                                 OB        11          100.0
+                                 IB        13          100.0
+                               LUT4        28          100.0
+                                 OB        14          100.0
 SUB MODULES
                  lab2_7_seg_decoder         1
-                              TOTAL        31
+lab2_counter(MAXCOUNT=200000,WIDTH=28)         1
+                              TOTAL       102
+----------------------------------------------------------------------
+Report for cell lab2_counter(MAXCOUNT=200000,WIDTH=28).v1
+Instance Path : lab2_counter_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        15          100.0
+                            FD1P3XZ        29          100.0
+                               LUT4        12           42.9
+                              TOTAL        56
 ----------------------------------------------------------------------
 Report for cell lab2_7_seg_decoder.v1
 Instance Path : lab2_7_seg_decoder_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         7           70.0
+                               LUT4         7           25.0
                               TOTAL         7

@@ -1,6 +1,6 @@
 -w
 -gui
--msgset "C:/Users/eing/Documents/GitHub/e155-lab2/promote.xml"
+-msgset "C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/promote.xml"
 -n 1
 -t 1
 -s 1

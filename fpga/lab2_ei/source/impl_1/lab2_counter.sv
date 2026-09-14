@@ -11,8 +11,8 @@ module lab2_counter #(parameter MAXCOUNT = 12_000_000, parameter WIDTH = 25)(
 	output logic [WIDTH-1:0] counter
 );
 	
-	logic clk_state = 0;
-	logic count_state = 0;
+	logic clk_state;
+	logic [WIDTH-1:0] count_state;
 	
 	// Simple clock divider
 	always_ff @(posedge clk) begin

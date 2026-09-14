@@ -48,10 +48,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Sep 13 01:42:36 2026
+Mon Sep 14 01:21:10 2026
 
 
-Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/eing/Documents/GitHub/e155-lab2/impl_1/lab2_ei_impl_1_lattice.synproj -logfile lab2_ei_impl_1_lattice.srp -gui -msgset C:/Users/eing/Documents/GitHub/e155-lab2/promote.xml 
+Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/lab2_ei_impl_1_lattice.synproj -logfile lab2_ei_impl_1_lattice.srp -gui -msgset C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/promote.xml 
 
 Lattice Synthesis Engine launched.
 
@@ -181,15 +181,15 @@ Analyzing Verilog file ../source/impl_1/lab2_ei.sv. VERI-1482
 Analyzing Verilog file ../source/impl_1/lab2_scanning.sv. VERI-1482
 Top module name (Verilog): lab2_ei
 INFO <35901018> - synthesis: ../source/impl_1/lab2_ei.sv(6): compiling module lab2_ei. VERI-1018
-INFO <35901018> - synthesis: ../source/impl_1/lab2_counter.sv(6): compiling module lab2_counter. VERI-1018
-WARNING <35901209> - synthesis: ../source/impl_1/lab2_counter.sv(34): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING <35901330> - synthesis: ../source/impl_1/lab2_ei.sv(25): actual bit length 1 differs from formal bit length 25 for port counter. VERI-1330
+INFO <35901018> - synthesis: ../source/impl_1/lab2_counter.sv(6): compiling module lab2_counter(MAXCOUNT=200000,WIDTH=28). VERI-1018
+WARNING <35901209> - synthesis: ../source/impl_1/lab2_counter.sv(34): expression size 32 truncated to fit in target size 28. VERI-1209
 INFO <35901018> - synthesis: ../source/impl_1/lab2_scanning.sv(6): compiling module lab2_scanning. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/lab2_counter.sv(6): compiling module lab2_counter. VERI-1018
+WARNING <35901209> - synthesis: ../source/impl_1/lab2_counter.sv(34): expression size 32 truncated to fit in target size 25. VERI-1209
 WARNING <35901330> - synthesis: ../source/impl_1/lab2_scanning.sv(17): actual bit length 1 differs from formal bit length 25 for port counter. VERI-1330
 WARNING <35931002> - synthesis: ../source/impl_1/lab2_scanning.sv(10): net clk does not have a driver. VDB-1002
 WARNING <35931002> - synthesis: ../source/impl_1/lab2_scanning.sv(11): net nreset does not have a driver. VDB-1002
-WARNING <35901330> - synthesis: ../source/impl_1/lab2_ei.sv(28): actual bit length 1 differs from formal bit length 4 for port row. VERI-1330
-WARNING <35908216> - synthesis: ../source/impl_1/lab2_ei.sv(32): index 3 is out of range [2:0] for led. VERI-1216
+WARNING <35901330> - synthesis: ../source/impl_1/lab2_ei.sv(31): actual bit length 1 differs from formal bit length 4 for port row. VERI-1330
 INFO <35901018> - synthesis: ../source/impl_1/lab2_7_seg_decoder.sv(7): compiling module lab2_7_seg_decoder. VERI-1018
 
 <A name="lse_parameter"></A><B><U><big>Parameter Setting</big></U></B>
@@ -200,56 +200,84 @@ INFO <35901018> - synthesis: ../source/impl_1/lab2_7_seg_decoder.sv(7): compilin
 	(Module: HSOSC)
 		CLKHF_DIV                 "0b00"
 
-	[Parameter Settings for Instance(s): lab2_counter_inst, lab2_counter_inst]
+	[Parameter Settings for Instance(s): lab2_counter_inst]
+	(Module: lab2_counter)
+		MAXCOUNT                  200000
+		WIDTH                     28
+
+	[Parameter Settings for Instance(s): lab2_counter_inst]
 	(Module: lab2_counter)
 		MAXCOUNT                  12000000
 		WIDTH                     25
 
 [Parameter Setting Section End]
-WARNING <35001771> - synthesis: Initial value found on net clk_new will be ignored due to unrecognized driver type
-WARNING <35935040> - synthesis: Register \lab2_counter_inst/clk_state clock is stuck at Zero. VDB-5040
 
 
 
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: nreset
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: sw2[3]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: sw2[2]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: sw2[1]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: sw2[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: nreset
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: sw1[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: sw1[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: sw1[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: sw1[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: sw2[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: sw2[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: sw2[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: sw2[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[6]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[5]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[4]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: clk
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: power[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: power[0]
 
 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (lab2_ei)######################
-Number of register bits => 0 of 5280 (0 % )
+Number of register bits => 29 of 5280 (0 % )
+CCU2 => 15
+FD1P3XZ => 29
 HSOSC_CORE => 1
-IB => 8
-LUT4 => 10
-OB => 11
+IB => 13
+LUT4 => 28
+OB => 14
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
-Number of even-length carry chains : 0
+Number of even-length carry chains : 1
 
 
 <A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 0
+Number of Clocks: 1
+  Net : clk_c, loads : 1
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : sw1_c[3], loads : 7
-  Net : sw1_c[2], loads : 7
-  Net : sw1_c[1], loads : 7
-  Net : sw1_c[0], loads : 7
-  Net : col_c[3], loads : 3
-  Net : col_c[2], loads : 3
-  Net : col_c[1], loads : 3
-  Net : col_c[0], loads : 3
-  Net : led_c[2], loads : 3
-  Net : led_c[1], loads : 2
+  Net : lab2_counter_inst/n102, loads : 43
+  Net : lab2_counter_inst/n266, loads : 16
+  Net : lab2_counter_inst/n117[27], loads : 16
+  Net : lab2_counter_inst/n4_adj_48, loads : 16
+  Net : lab2_counter_inst/n65, loads : 16
+  Net : lab2_counter_inst/n117[25], loads : 15
+  Net : lab2_counter_inst/n117[26], loads : 15
+  Net : lab2_counter_inst/n264, loads : 15
+  Net : lab2_counter_inst/n117[24], loads : 14
+  Net : lab2_counter_inst/n117[23], loads : 14
 ################### End Clock Report ##################
 
 
@@ -261,13 +289,13 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 88 MB
+Peak Memory Usage: 89 MB
 
 --------------------------------------------------------------
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 8205a9b1487fd750f64e68ad4f777a3c277e5871
+Checksum -- synthesis -- netlist: 45fbb8f1869e58eb61a2fb24d63a7b62a1a1ca12
 
 
 

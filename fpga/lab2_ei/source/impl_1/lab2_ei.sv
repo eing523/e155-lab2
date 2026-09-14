@@ -9,20 +9,23 @@ module lab2_ei(
 	input  logic [3:0] sw2,
 	input  logic [3:0] col,
 	output logic [6:0] seg,
-	output logic [2:0] led,
-	output logic       clk
+	output logic [3:0] led,
+	output logic       clk,
+    output logic [1:0] power // determines power
+
 );
 	
-	logic clk_new = 0;
-	logic counter = 0;
+	localparam WIDTH = 28; 
+
+	logic clk_new;
+	logic [WIDTH-1:0] counter;
     logic [3:0] s; // DIP switches
-	logic [1:0] power; // determines power
 	
 	// Internal high-speed oscillator
 	HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
 	
 	// Instantiate counter module
-	lab2_counter lab2_counter_inst (.clk(clk), .nreset(nreset), .enable(1'b1), .counter(counter), .clk_new(clk_new));
+	lab2_counter #(.MAXCOUNT(200_000), .WIDTH(28)) lab2_counter_inst (.clk(clk), .nreset(nreset), .enable(1'b1), .counter(counter), .clk_new(clk_new));
 	
 	// Instantiate scanning module
 	lab2_scanning lab2_scanning_inst(.row(row));
