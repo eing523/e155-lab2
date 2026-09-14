@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Sep 14 01:21:10 2026
+Mon Sep 14 15:56:04 2026
 
 
 Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/lab2_ei_impl_1_lattice.synproj -logfile lab2_ei_impl_1_lattice.srp -gui -msgset C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/promote.xml 
@@ -181,15 +181,11 @@ Analyzing Verilog file ../source/impl_1/lab2_ei.sv. VERI-1482
 Analyzing Verilog file ../source/impl_1/lab2_scanning.sv. VERI-1482
 Top module name (Verilog): lab2_ei
 INFO <35901018> - synthesis: ../source/impl_1/lab2_ei.sv(6): compiling module lab2_ei. VERI-1018
-INFO <35901018> - synthesis: ../source/impl_1/lab2_counter.sv(6): compiling module lab2_counter(MAXCOUNT=200000,WIDTH=28). VERI-1018
-WARNING <35901209> - synthesis: ../source/impl_1/lab2_counter.sv(34): expression size 32 truncated to fit in target size 28. VERI-1209
+INFO <35901018> - synthesis: ../source/impl_1/lab2_counter.sv(6): compiling module lab2_counter(MAXCOUNT=200000). VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/lab2_scanning.sv(6): compiling module lab2_scanning. VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/lab2_counter.sv(6): compiling module lab2_counter. VERI-1018
-WARNING <35901209> - synthesis: ../source/impl_1/lab2_counter.sv(34): expression size 32 truncated to fit in target size 25. VERI-1209
-WARNING <35901330> - synthesis: ../source/impl_1/lab2_scanning.sv(17): actual bit length 1 differs from formal bit length 25 for port counter. VERI-1330
-WARNING <35931002> - synthesis: ../source/impl_1/lab2_scanning.sv(10): net clk does not have a driver. VDB-1002
-WARNING <35931002> - synthesis: ../source/impl_1/lab2_scanning.sv(11): net nreset does not have a driver. VDB-1002
-WARNING <35901330> - synthesis: ../source/impl_1/lab2_ei.sv(31): actual bit length 1 differs from formal bit length 4 for port row. VERI-1330
+WARNING <35931002> - synthesis: ../source/impl_1/lab2_scanning.sv(13): net clk does not have a driver. VDB-1002
+WARNING <35931002> - synthesis: ../source/impl_1/lab2_scanning.sv(14): net nreset does not have a driver. VDB-1002
 INFO <35901018> - synthesis: ../source/impl_1/lab2_7_seg_decoder.sv(7): compiling module lab2_7_seg_decoder. VERI-1018
 
 <A name="lse_parameter"></A><B><U><big>Parameter Setting</big></U></B>
@@ -203,12 +199,12 @@ INFO <35901018> - synthesis: ../source/impl_1/lab2_7_seg_decoder.sv(7): compilin
 	[Parameter Settings for Instance(s): lab2_counter_inst]
 	(Module: lab2_counter)
 		MAXCOUNT                  200000
-		WIDTH                     28
+		WIDTH                     32
 
 	[Parameter Settings for Instance(s): lab2_counter_inst]
 	(Module: lab2_counter)
 		MAXCOUNT                  12000000
-		WIDTH                     25
+		WIDTH                     32
 
 [Parameter Setting Section End]
 
@@ -246,12 +242,12 @@ WARNING <35002062> - synthesis: Port rejected for I/O register mapping: power[0]
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (lab2_ei)######################
-Number of register bits => 29 of 5280 (0 % )
-CCU2 => 15
-FD1P3XZ => 29
+Number of register bits => 33 of 5280 (0 % )
+CCU2 => 17
+FD1P3XZ => 33
 HSOSC_CORE => 1
 IB => 13
-LUT4 => 28
+LUT4 => 30
 OB => 14
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -268,16 +264,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : lab2_counter_inst/n102, loads : 43
-  Net : lab2_counter_inst/n266, loads : 16
-  Net : lab2_counter_inst/n117[27], loads : 16
-  Net : lab2_counter_inst/n4_adj_48, loads : 16
-  Net : lab2_counter_inst/n65, loads : 16
-  Net : lab2_counter_inst/n117[25], loads : 15
-  Net : lab2_counter_inst/n117[26], loads : 15
-  Net : lab2_counter_inst/n264, loads : 15
-  Net : lab2_counter_inst/n117[24], loads : 14
-  Net : lab2_counter_inst/n117[23], loads : 14
+  Net : lab2_counter_inst/n110, loads : 47
+  Net : lab2_counter_inst/n133[31], loads : 18
+  Net : lab2_counter_inst/n278, loads : 18
+  Net : lab2_counter_inst/n133[30], loads : 17
+  Net : lab2_counter_inst/n133[29], loads : 17
+  Net : lab2_counter_inst/n276, loads : 17
+  Net : lab2_counter_inst/n73, loads : 16
+  Net : lab2_counter_inst/n4, loads : 16
+  Net : lab2_counter_inst/n133[28], loads : 16
+  Net : lab2_counter_inst/n274, loads : 16
 ################### End Clock Report ##################
 
 
@@ -295,7 +291,7 @@ Peak Memory Usage: 89 MB
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 45fbb8f1869e58eb61a2fb24d63a7b62a1a1ca12
+Checksum -- synthesis -- netlist: 9ee8665e8af64e5d381e854d7da91784225517fa
 
 
 

@@ -15,17 +15,18 @@ module lab2_ei(
 
 );
 	
-	localparam WIDTH = 28; 
+	localparam WIDTH = 32; 
 
 	logic clk_new;
 	logic [WIDTH-1:0] counter;
     logic [3:0] s; // DIP switches
-	
+	logic [3:0] row;
+
 	// Internal high-speed oscillator
 	HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
 	
 	// Instantiate counter module
-	lab2_counter #(.MAXCOUNT(200_000), .WIDTH(28)) lab2_counter_inst (.clk(clk), .nreset(nreset), .enable(1'b1), .counter(counter), .clk_new(clk_new));
+	lab2_counter #(.MAXCOUNT(200_000), .WIDTH(32)) lab2_counter_inst (.clk(clk), .nreset(nreset), .enable(1'b1), .counter(counter), .clk_new(clk_new));
 	
 	// Instantiate scanning module
 	lab2_scanning lab2_scanning_inst(.row(row));

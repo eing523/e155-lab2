@@ -6,15 +6,18 @@
 module lab2_scanning (
 	output logic [3:0] row
 );
+
+	localparam WIDTH = 32; 
+	
 	logic clk_new;
 	logic clk;
     logic nreset;
-	logic counter;
+	logic [WIDTH-1:0] counter;
 
 	localparam MAXCOUNT = 12_000_000; 
 	
 	// Instantiate counter module
-	lab2_counter #(.MAXCOUNT(MAXCOUNT), .WIDTH(25)) lab2_counter_inst (.clk(clk), .nreset(nreset), .enable(1'b1), .counter(counter), .clk_new(clk_new));
+	lab2_counter #(.MAXCOUNT(MAXCOUNT), .WIDTH(32)) lab2_counter_inst (.clk(clk), .nreset(nreset), .enable(1'b1), .counter(counter), .clk_new(clk_new));
 	
 	// row logic
 	

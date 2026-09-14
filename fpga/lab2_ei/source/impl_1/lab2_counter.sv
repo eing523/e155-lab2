@@ -3,7 +3,7 @@
 // Date of creation: 9/12/2026
 // Summary: Module for E155 Lab 2, which contains the counter.
 
-module lab2_counter #(parameter MAXCOUNT = 12_000_000, parameter WIDTH = 25)(
+module lab2_counter #(parameter MAXCOUNT = 12_000_000, parameter WIDTH = 32)(
 	input  logic clk,
 	input  logic nreset,
 	input  logic enable,

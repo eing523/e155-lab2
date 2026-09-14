@@ -1,32 +1,32 @@
 ----------------------------------------------------------------------
 Report for cell lab2_ei.TECH
-Register bits:  29 of 5280 (0.549%)
+Register bits:  33 of 5280 (0.625%)
 I/O cells:      27
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        15          100.0
-                            FD1P3XZ        29          100.0
+                               CCU2        17          100.0
+                            FD1P3XZ        33          100.0
                          HSOSC_CORE         1          100.0
                                  IB        13          100.0
-                               LUT4        28          100.0
+                               LUT4        30          100.0
                                  OB        14          100.0
 SUB MODULES
                  lab2_7_seg_decoder         1
-lab2_counter(MAXCOUNT=200000,WIDTH=28)         1
-                              TOTAL       102
+      lab2_counter(MAXCOUNT=200000)         1
+                              TOTAL       110
 ----------------------------------------------------------------------
-Report for cell lab2_counter(MAXCOUNT=200000,WIDTH=28).v1
+Report for cell lab2_counter(MAXCOUNT=200000).v1
 Instance Path : lab2_counter_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        15          100.0
-                            FD1P3XZ        29          100.0
-                               LUT4        12           42.9
-                              TOTAL        56
+                                FA2        17          100.0
+                            FD1P3XZ        33          100.0
+                               LUT4        14           46.7
+                              TOTAL        64
 ----------------------------------------------------------------------
 Report for cell lab2_7_seg_decoder.v1
 Instance Path : lab2_7_seg_decoder_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         7           25.0
+                               LUT4         7           23.3
                               TOTAL         7

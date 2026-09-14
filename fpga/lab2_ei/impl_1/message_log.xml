@@ -778,18 +778,9 @@
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv(6): </Dynamic>
-            <Dynamic>lab2_counter(MAXCOUNT=200000,WIDTH=28)</Dynamic>
+            <Dynamic>lab2_counter(MAXCOUNT=200000)</Dynamic>
             <Navigation>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv</Navigation>
             <Navigation>6</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv(34): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>28</Dynamic>
-            <Navigation>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv</Navigation>
-            <Navigation>34</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -808,49 +799,20 @@
             <Navigation>6</Navigation>
         </Message>
         <Message>
-            <ID>35901209</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv(34): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>25</Dynamic>
-            <Navigation>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv</Navigation>
-            <Navigation>34</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv(17): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Dynamic>25</Dynamic>
-            <Dynamic>counter</Dynamic>
-            <Navigation>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv</Navigation>
-            <Navigation>17</Navigation>
-        </Message>
-        <Message>
             <ID>35931002</ID>
             <Severity>16</Severity>
-            <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv(10): </Dynamic>
+            <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv(13): </Dynamic>
             <Dynamic>clk</Dynamic>
             <Navigation>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv</Navigation>
-            <Navigation>10</Navigation>
+            <Navigation>13</Navigation>
         </Message>
         <Message>
             <ID>35931002</ID>
             <Severity>16</Severity>
-            <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv(11): </Dynamic>
+            <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv(14): </Dynamic>
             <Dynamic>nreset</Dynamic>
             <Navigation>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv</Navigation>
-            <Navigation>11</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei.sv(31): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Dynamic>4</Dynamic>
-            <Dynamic>row</Dynamic>
-            <Navigation>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei.sv</Navigation>
-            <Navigation>31</Navigation>
+            <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -876,18 +838,9 @@
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>../source/impl_1/lab2_counter.sv(6): </Dynamic>
-            <Dynamic>lab2_counter(MAXCOUNT=200000,WIDTH=28)</Dynamic>
+            <Dynamic>lab2_counter(MAXCOUNT=200000)</Dynamic>
             <Navigation>../source/impl_1/lab2_counter.sv</Navigation>
             <Navigation>6</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/lab2_counter.sv(34): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>28</Dynamic>
-            <Navigation>../source/impl_1/lab2_counter.sv</Navigation>
-            <Navigation>34</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -906,49 +859,20 @@
             <Navigation>6</Navigation>
         </Message>
         <Message>
-            <ID>35901209</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/lab2_counter.sv(34): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>25</Dynamic>
-            <Navigation>../source/impl_1/lab2_counter.sv</Navigation>
-            <Navigation>34</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/lab2_scanning.sv(17): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Dynamic>25</Dynamic>
-            <Dynamic>counter</Dynamic>
-            <Navigation>../source/impl_1/lab2_scanning.sv</Navigation>
-            <Navigation>17</Navigation>
-        </Message>
-        <Message>
             <ID>35931002</ID>
             <Severity>16</Severity>
-            <Dynamic>../source/impl_1/lab2_scanning.sv(10): </Dynamic>
+            <Dynamic>../source/impl_1/lab2_scanning.sv(13): </Dynamic>
             <Dynamic>clk</Dynamic>
             <Navigation>../source/impl_1/lab2_scanning.sv</Navigation>
-            <Navigation>10</Navigation>
+            <Navigation>13</Navigation>
         </Message>
         <Message>
             <ID>35931002</ID>
             <Severity>16</Severity>
-            <Dynamic>../source/impl_1/lab2_scanning.sv(11): </Dynamic>
+            <Dynamic>../source/impl_1/lab2_scanning.sv(14): </Dynamic>
             <Dynamic>nreset</Dynamic>
             <Navigation>../source/impl_1/lab2_scanning.sv</Navigation>
-            <Navigation>11</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/lab2_ei.sv(31): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Dynamic>4</Dynamic>
-            <Dynamic>row</Dynamic>
-            <Navigation>../source/impl_1/lab2_ei.sv</Navigation>
-            <Navigation>31</Navigation>
+            <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
