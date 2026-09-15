@@ -4,14 +4,14 @@
 // Summary: Scanning module for E155 Lab 2, which asserts signals on each row one at a time, then observes the values of the columns.
 
 module lab2_scanning (
+	input logic clk,
+	input logic nreset,
+	output logic clk_new,
 	output logic [3:0] row
 );
 
 	localparam WIDTH = 32; 
 	
-	logic clk_new;
-	logic clk;
-    logic nreset;
 	logic [WIDTH-1:0] counter;
 
 	localparam MAXCOUNT = 12_000_000; 
@@ -22,7 +22,7 @@ module lab2_scanning (
 	// row logic
 	
 	assign row = 
-		   (nreset == 0) ? row == 4'b0000 :
+		   (nreset == 0) ? 4'b0000 :
 		   ((clk_new == 0) & (MAXCOUNT <= 5999)) ? 4'b1000 :
 		   ((clk_new == 0) & (MAXCOUNT <= 11_999_999)) ? 4'b0100 :
 		   ((clk_new == 1) & (MAXCOUNT <= 5999)) ? 4'b0010 :

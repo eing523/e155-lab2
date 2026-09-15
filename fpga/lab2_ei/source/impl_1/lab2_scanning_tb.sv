@@ -1,4 +1,5 @@
-`timescale 1 ns/1 ns
+`
+timescale 1 ns/1 ns
 
 module lab2_scanning_tb();
 	logic [3:0] row;

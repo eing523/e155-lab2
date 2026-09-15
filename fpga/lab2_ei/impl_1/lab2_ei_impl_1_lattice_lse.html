@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Sep 14 15:56:04 2026
+Tue Sep 15 01:58:43 2026
 
 
 Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/lab2_ei_impl_1_lattice.synproj -logfile lab2_ei_impl_1_lattice.srp -gui -msgset C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/promote.xml 
@@ -184,8 +184,6 @@ INFO <35901018> - synthesis: ../source/impl_1/lab2_ei.sv(6): compiling module la
 INFO <35901018> - synthesis: ../source/impl_1/lab2_counter.sv(6): compiling module lab2_counter(MAXCOUNT=200000). VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/lab2_scanning.sv(6): compiling module lab2_scanning. VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/lab2_counter.sv(6): compiling module lab2_counter. VERI-1018
-WARNING <35931002> - synthesis: ../source/impl_1/lab2_scanning.sv(13): net clk does not have a driver. VDB-1002
-WARNING <35931002> - synthesis: ../source/impl_1/lab2_scanning.sv(14): net nreset does not have a driver. VDB-1002
 INFO <35901018> - synthesis: ../source/impl_1/lab2_7_seg_decoder.sv(7): compiling module lab2_7_seg_decoder. VERI-1018
 
 <A name="lse_parameter"></A><B><U><big>Parameter Setting</big></U></B>
@@ -209,6 +207,16 @@ INFO <35901018> - synthesis: ../source/impl_1/lab2_7_seg_decoder.sv(7): compilin
 [Parameter Setting Section End]
 
 
+
+Combinational loop found : 1
+
+ Net row_c[0] 
+
+ Instance nreset_c_I_0 
+
+ Net row_c_0__N_33 
+
+ Instance \lab2_scanning_inst/i21 
 
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: nreset
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: sw1[3]
@@ -237,6 +245,10 @@ WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[0]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: clk
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: power[1]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: power[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row[0]
 
 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
@@ -247,8 +259,8 @@ CCU2 => 17
 FD1P3XZ => 33
 HSOSC_CORE => 1
 IB => 13
-LUT4 => 30
-OB => 14
+LUT4 => 31
+OB => 18
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
 Number of even-length carry chains : 1
@@ -264,16 +276,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : lab2_counter_inst/n110, loads : 47
-  Net : lab2_counter_inst/n133[31], loads : 18
-  Net : lab2_counter_inst/n278, loads : 18
-  Net : lab2_counter_inst/n133[30], loads : 17
-  Net : lab2_counter_inst/n133[29], loads : 17
-  Net : lab2_counter_inst/n276, loads : 17
-  Net : lab2_counter_inst/n73, loads : 16
-  Net : lab2_counter_inst/n4, loads : 16
-  Net : lab2_counter_inst/n133[28], loads : 16
-  Net : lab2_counter_inst/n274, loads : 16
+  Net : lab2_scanning_inst/lab2_counter_inst/n123, loads : 51
+  Net : lab2_scanning_inst/lab2_counter_inst/n73, loads : 20
+  Net : lab2_scanning_inst/lab2_counter_inst/n4, loads : 20
+  Net : lab2_scanning_inst/lab2_counter_inst/n600, loads : 18
+  Net : lab2_scanning_inst/lab2_counter_inst/n133[31], loads : 18
+  Net : lab2_scanning_inst/lab2_counter_inst/n133[29], loads : 17
+  Net : lab2_scanning_inst/lab2_counter_inst/n46, loads : 17
+  Net : lab2_scanning_inst/lab2_counter_inst/n598, loads : 17
+  Net : lab2_scanning_inst/lab2_counter_inst/n133[30], loads : 17
+  Net : lab2_scanning_inst/lab2_counter_inst/n133[27], loads : 16
 ################### End Clock Report ##################
 
 
@@ -291,7 +303,7 @@ Peak Memory Usage: 89 MB
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 9ee8665e8af64e5d381e854d7da91784225517fa
+Checksum -- synthesis -- netlist: f5becf74736d1903d7b7d3502568bb5cad653698
 
 
 

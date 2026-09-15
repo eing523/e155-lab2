@@ -18,10 +18,12 @@ Successfully loading udb, 0.03 seconds
 
 Initializing timer
 Starting design annotation....
+lab2_scanning_inst.SLICE_46/D0 delay <-from  to->  lab2_scanning_inst.SLICE_46/F0
+Delay for loop through lab2_scanning_inst.SLICE_46/F0   is   449
 
 Starting full timing analysis...
 Performance Hardware Data Status:   Advanced       Version 1.0.
-Connections ignored  20  counted  275  covered  188
+Connections ignored  20  counted  279  covered  189
 Changing speed to m;   changing temperature to -40
 
 STA Runtime and Peak Memory Usage :
@@ -29,5 +31,5 @@ Total CPU Time: 0 secs
 Total REAL Time: 0 secs 
 Peak Memory Usage: 100 MB
 
- 0.607944s wall, 0.546875s user + 0.046875s system = 0.593750s CPU (97.7%)
+ 0.598615s wall, 0.546875s user + 0.046875s system = 0.593750s CPU (99.2%)
 

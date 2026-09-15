@@ -799,22 +799,6 @@
             <Navigation>6</Navigation>
         </Message>
         <Message>
-            <ID>35931002</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv(13): </Dynamic>
-            <Dynamic>clk</Dynamic>
-            <Navigation>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv</Navigation>
-            <Navigation>13</Navigation>
-        </Message>
-        <Message>
-            <ID>35931002</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv(14): </Dynamic>
-            <Dynamic>nreset</Dynamic>
-            <Navigation>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv</Navigation>
-            <Navigation>14</Navigation>
-        </Message>
-        <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_7_seg_decoder.sv(7): </Dynamic>
@@ -857,22 +841,6 @@
             <Dynamic>lab2_counter</Dynamic>
             <Navigation>../source/impl_1/lab2_counter.sv</Navigation>
             <Navigation>6</Navigation>
-        </Message>
-        <Message>
-            <ID>35931002</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/lab2_scanning.sv(13): </Dynamic>
-            <Dynamic>clk</Dynamic>
-            <Navigation>../source/impl_1/lab2_scanning.sv</Navigation>
-            <Navigation>13</Navigation>
-        </Message>
-        <Message>
-            <ID>35931002</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/lab2_scanning.sv(14): </Dynamic>
-            <Dynamic>nreset</Dynamic>
-            <Navigation>../source/impl_1/lab2_scanning.sv</Navigation>
-            <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -1016,6 +984,26 @@
             <ID>35002062</ID>
             <Severity>16</Severity>
             <Dynamic>power[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002062</ID>
+            <Severity>16</Severity>
+            <Dynamic>row[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002062</ID>
+            <Severity>16</Severity>
+            <Dynamic>row[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002062</ID>
+            <Severity>16</Severity>
+            <Dynamic>row[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002062</ID>
+            <Severity>16</Severity>
+            <Dynamic>row[0]</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

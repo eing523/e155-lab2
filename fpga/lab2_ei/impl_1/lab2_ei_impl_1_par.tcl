@@ -23,8 +23,8 @@ if {[file exists {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/l
   file copy -force -- {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/lab2_ei_impl_1_syn.udb} {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/incr/postsyn.udb}
   file copy -force -- {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/lab2_ei_impl_1_map.udb} {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/incr/postmap.udb}
   file copy -force -- {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/lab2_ei_impl_1.udb} {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/incr/postpar.udb}
-  if [file exists {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei.pdc}] {
-    file copy -force -- {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei.pdc} {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/incr/lastrun.pdc}
+  if [file exists {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei_scanner.pdc}] {
+    file copy -force -- {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei_scanner.pdc} {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/incr/lastrun.pdc}
   }
 }
 
