@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1789549524">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1789549524"/>
+        <Milestone name="Export" build_result="2" build_time="1789555678">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1789555678"/>
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1789549512">
-            <Task name="Map" build_result="2" update_result="0" update_time="1789549512"/>
-            <Task name="MapTrace" build_result="0" update_result="2" update_time="1789540903"/>
+        <Milestone name="Map" build_result="2" build_time="1789555667">
+            <Task name="Map" build_result="2" update_result="0" update_time="1789555667"/>
+            <Task name="MapTrace" build_result="0" update_result="2" update_time="1789555190"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1789549523">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1789549523"/>
+        <Milestone name="PAR" build_result="2" build_time="1789555677">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1789555677"/>
             <Task name="PostParVM" build_result="0" update_result="3" update_time="0"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1789549523"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1789555678"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
         <Milestone name="Synthesis" build_result="2" build_time="1789549512">
@@ -38,12 +38,12 @@
         <Report name="lab1_ei_impl_1_map.udb" last_build_time="1789265297" last_build_size="7267"/>
         <Report name="lab1_ei_impl_1_rtl.udb" last_build_time="1789265294" last_build_size="4948"/>
         <Report name="lab1_ei_impl_1_syn.udb" last_build_time="1789265295" last_build_size="4483"/>
-        <Report name="lab2_ei_impl_1.bgn" last_build_time="1789549524" last_build_size="1235"/>
-        <Report name="lab2_ei_impl_1.bin" last_build_time="1789549524" last_build_size="104156"/>
+        <Report name="lab2_ei_impl_1.bgn" last_build_time="1789555678" last_build_size="1235"/>
+        <Report name="lab2_ei_impl_1.bin" last_build_time="1789555678" last_build_size="104156"/>
         <Report name="lab2_ei_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
-        <Report name="lab2_ei_impl_1.twr.html" last_build_time="1789549523" last_build_size="496528"/>
-        <Report name="lab2_ei_impl_1.udb" last_build_time="1789549522" last_build_size="29070"/>
-        <Report name="lab2_ei_impl_1_map.udb" last_build_time="1789549512" last_build_size="18899"/>
+        <Report name="lab2_ei_impl_1.twr.html" last_build_time="1789555677" last_build_size="511826"/>
+        <Report name="lab2_ei_impl_1.udb" last_build_time="1789555677" last_build_size="29216"/>
+        <Report name="lab2_ei_impl_1_map.udb" last_build_time="1789555667" last_build_size="19100"/>
         <Report name="lab2_ei_impl_1_rtl.udb" last_build_time="1789549511" last_build_size="8625"/>
         <Report name="lab2_ei_impl_1_syn.udb" last_build_time="1789549512" last_build_size="10750"/>
     </Strategy>

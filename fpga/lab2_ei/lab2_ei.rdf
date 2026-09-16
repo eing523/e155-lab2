@@ -21,10 +21,10 @@
         <Source name="source/impl_1/lab2_scanning_tb.sv" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options VerilogStandard="System Verilog"/>
         </Source>
-        <Source name="lab2_ei.pdc" type="Physical Constraints File" type_short="PDC" excluded="TRUE">
+        <Source name="lab2_ei.pdc" type="Physical Constraints File" type_short="PDC">
             <Options/>
         </Source>
-        <Source name="lab2_ei_scanner.pdc" type="Physical Constraints File" type_short="PDC">
+        <Source name="lab2_ei_scanner.pdc" type="Physical Constraints File" type_short="PDC" excluded="TRUE">
             <Options/>
         </Source>
         <Source name="lab2_ei_tb/lab2_ei_tb.spf" type="Simulation Project File" type_short="SPF">

@@ -13,7 +13,7 @@ sys_set_attribute -gui on -msg {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/la
 msg_load {C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/promote.xml}
 des_set_project_udb -in {lab2_ei_impl_1_syn.udb} -out {lab2_ei_impl_1_map.udb} -milestone map -pm ice40tp
 des_set_reference_udb -clean
-map_set_option {pdc_file "C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei_scanner.pdc"}
+map_set_option {pdc_file "C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei.pdc"}
 # map option
 map_set_option { report_symbol_cross_reference false report_signal_cross_reference false   ignore_constraint_errors false }
 map_run
