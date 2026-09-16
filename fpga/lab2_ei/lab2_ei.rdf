@@ -27,6 +27,12 @@
         <Source name="lab2_ei_scanner.pdc" type="Physical Constraints File" type_short="PDC">
             <Options/>
         </Source>
+        <Source name="lab2_ei_tb/lab2_ei_tb.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="lab2_scanning_tb/lab2_scanning_tb.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
         <Source name="source/impl_1.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>

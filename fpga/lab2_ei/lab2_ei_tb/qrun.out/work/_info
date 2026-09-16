@@ -1,0 +1,152 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei_tb
+vlab2_7_seg_decoder
+Z2 2C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_7_seg_decoder.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv
+Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z4 !s110 1789543486
+!i10b 1
+!s100 576>RjLMagWL==GI[Xfh93
+IV<jia9i1lWSf62mb9BZ^U0
+S1
+R1
+w1789522836
+8C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_7_seg_decoder.sv
+FC:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_7_seg_decoder.sv
+!i122 0
+L0 7 28
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2025.2;82
+r1
+!s85 0
+31
+Z7 !s108 1789543486.000000
+Z8 !s107 C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_7_seg_decoder.sv|
+Z9 !s90 -reportprogress|300|-L|work|-sv|-L|pmi_work|-L|ovi_ice40up|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_7_seg_decoder.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-csession=incr|
+!i113 0
+Z10 o-L work -sv -L pmi_work -L ovi_ice40up -work qrun.out/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0 defaultOptions 1085333592
+vlab2_counter
+R2
+R3
+R4
+!i10b 1
+!s100 KnEm<i3QbR][IfO6_`FD80
+I]>lMT4?XZ51<6ZQ_eNTXX1
+S1
+R1
+w1789528529
+8C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv
+FC:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv
+!i122 0
+L0 6 36
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vlab2_ei
+R2
+R3
+R4
+!i10b 1
+!s100 DNJkk8J^@EnZb5FnBTcc<2
+I85;8@SeH[o1Hb81T[dPCB3
+S1
+R1
+w1789540882
+8C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei.sv
+FC:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei.sv
+!i122 0
+L0 6 46
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vlab2_ei_tb
+R2
+R3
+R4
+!i10b 1
+!s100 czEKo[2AZcWoWNSGPNnCa2
+IecS]<9FkCa[QcPN<ZI?BR1
+S1
+R1
+w1789543428
+8C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv
+FC:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv
+!i122 0
+L0 3 110
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vlab2_scanning
+R2
+R3
+R4
+!i10b 1
+!s100 4i9AAOUM[oPd:eQSLIBl;1
+IWX8Q5f]CV?EY^D=@dWecQ2
+S1
+R1
+w1789540961
+8C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv
+FC:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv
+!i122 0
+L0 6 28
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+Tqrun_opt
+!i145 1
+!i144 0
+R4
+VWU@I<>XE_kV:>>WS^9_JU1
+04 10 4 work lab2_ei_tb fast 0
+R0
+!s12f OEM25U6 
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-suppress vopt-7033 -L work +acc +noacc+pmi_work.* +noacc+ovi_ice40up.* -L pmi_work -L ovi_ice40up -work qrun.out/work
+tCvgOpt 0 defaultOptions 1107585188
+nqrun_opt
+OL;O;2025.2;82

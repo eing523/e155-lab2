@@ -851,6 +851,16 @@
             <Navigation>7</Navigation>
         </Message>
         <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>enable</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>enable</Dynamic>
+        </Message>
+        <Message>
             <ID>35002062</ID>
             <Severity>16</Severity>
             <Dynamic>nreset</Dynamic>
@@ -918,6 +928,11 @@
         <Message>
             <ID>35002062</ID>
             <Severity>16</Severity>
+            <Dynamic>enable</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002062</ID>
+            <Severity>16</Severity>
             <Dynamic>seg[6]</Dynamic>
         </Message>
         <Message>
@@ -969,11 +984,6 @@
             <ID>35002062</ID>
             <Severity>16</Severity>
             <Dynamic>led[0]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002062</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
         </Message>
         <Message>
             <ID>35002062</ID>

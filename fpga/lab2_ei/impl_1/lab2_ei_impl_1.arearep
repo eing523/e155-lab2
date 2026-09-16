@@ -1,44 +1,54 @@
 ----------------------------------------------------------------------
 Report for cell lab2_ei.TECH
-Register bits:  33 of 5280 (0.625%)
+Register bits:  66 of 5280 (1.250%)
 I/O cells:      31
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        17          100.0
-                            FD1P3XZ        33          100.0
+                               CCU2        34          100.0
+                            FD1P3XZ        66          100.0
                          HSOSC_CORE         1          100.0
-                                 IB        13          100.0
-                               LUT4        31          100.0
-                                 OB        18          100.0
+                                 IB        14          100.0
+                               LUT4       126          100.0
+                                 OB        17          100.0
 SUB MODULES
                  lab2_7_seg_decoder         1
                        lab2_counter         1
+      lab2_counter(MAXCOUNT=200000)         1
                       lab2_scanning         1
-                              TOTAL       116
+                              TOTAL       262
 ----------------------------------------------------------------------
-Report for cell lab2_7_seg_decoder.v1
-Instance Path : lab2_7_seg_decoder_inst
+Report for cell lab2_counter(MAXCOUNT=200000).v1
+Instance Path : lab2_counter_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         7           22.6
-                              TOTAL         7
+                                FA2        17           50.0
+                            FD1P3XZ        33           50.0
+                               LUT4        45           35.7
+                              TOTAL        95
 ----------------------------------------------------------------------
 Report for cell lab2_scanning.v1
 Instance Path : lab2_scanning_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        17          100.0
-                            FD1P3XZ        33          100.0
-                               LUT4        15           48.4
+                                FA2        17           50.0
+                            FD1P3XZ        33           50.0
+                               LUT4        63           50.0
 SUB MODULES
                        lab2_counter         1
-                              TOTAL        66
+                              TOTAL       114
 ----------------------------------------------------------------------
 Report for cell lab2_counter.v1
 Instance Path : lab2_scanning_inst.lab2_counter_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        17          100.0
-                            FD1P3XZ        33          100.0
-                               LUT4        14           45.2
-                              TOTAL        64
+                                FA2        17           50.0
+                            FD1P3XZ        33           50.0
+                               LUT4        48           38.1
+                              TOTAL        98
+----------------------------------------------------------------------
+Report for cell lab2_7_seg_decoder.v1
+Instance Path : lab2_7_seg_decoder_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7            5.6
+                              TOTAL         7

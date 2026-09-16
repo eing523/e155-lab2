@@ -6,6 +6,7 @@
 module lab2_scanning (
 	input logic clk,
 	input logic nreset,
+	input logic enable = 1'b1,
 	output logic clk_new,
 	output logic [3:0] row
 );
@@ -17,16 +18,16 @@ module lab2_scanning (
 	localparam MAXCOUNT = 12_000_000; 
 	
 	// Instantiate counter module
-	lab2_counter #(.MAXCOUNT(MAXCOUNT), .WIDTH(32)) lab2_counter_inst (.clk(clk), .nreset(nreset), .enable(1'b1), .counter(counter), .clk_new(clk_new));
+	lab2_counter #(.MAXCOUNT(MAXCOUNT), .WIDTH(32)) lab2_counter_inst (.clk(clk), .nreset(nreset), .enable(enable), .counter(counter), .clk_new(clk_new));
 	
-	// row logic
+	// row logic - 2Hz blinking
 	
 	assign row = 
 		   (nreset == 0) ? 4'b0000 :
-		   ((clk_new == 0) & (MAXCOUNT <= 5999)) ? 4'b1000 :
-		   ((clk_new == 0) & (MAXCOUNT <= 11_999_999)) ? 4'b0100 :
-		   ((clk_new == 1) & (MAXCOUNT <= 5999)) ? 4'b0010 :
-		   ((clk_new == 1) & (MAXCOUNT <= 11_999_999)) ? 4'b0001 :
-		   row == 4'b0000;
+		   ((clk_new == 0) & (counter <= 5_999_999)) ? 4'b1000 :
+		   ((clk_new == 0) & (counter <= 11_999_999)) ? 4'b0100 :
+		   ((clk_new == 1) & (counter <= 5_999_999)) ? 4'b0010 :
+		   ((clk_new == 1) & (counter <= 11_999_999)) ? 4'b0001 :
+		   4'b0000;
 		   
 endmodule

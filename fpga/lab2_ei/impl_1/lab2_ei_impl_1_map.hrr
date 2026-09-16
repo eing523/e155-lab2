@@ -3,40 +3,50 @@ Report for cell lab2_ei
    Instance path: lab2_ei
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         67        100.0
-                               LUTGATE	         33        100.0
-                                LUTCCU	         34        100.0
+                                  LUT4	        195        100.0
+                               LUTGATE	        127        100.0
+                                LUTCCU	         68        100.0
                                  IOBUF	         31        100.0
-                                PFUREG	         33        100.0
+                                PFUREG	         66        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                    lab2_7_seg_decoder	          1        10.4
-                         lab2_scanning	          1        71.6
+                    lab2_7_seg_decoder	          1         3.6
+         lab2_counter(MAXCOUNT=200000)	          1        40.5
+                         lab2_scanning	          1        49.7
 ---------------------------------------------------
-Report for cell lab2_7_seg_decoder
-   Instance path: lab2_ei/lab2_7_seg_decoder_inst
+Report for cell lab2_counter(MAXCOUNT=200000)
+   Instance path: lab2_ei/lab2_counter_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          7        10.4
-                               LUTGATE	          7        21.2
+                                  LUT4	         79        40.5
+                               LUTGATE	         45        35.4
+                                LUTCCU	         34        50.0
+                                PFUREG	         33        50.0
 ---------------------------------------------------
 Report for cell lab2_scanning
    Instance path: lab2_ei/lab2_scanning_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         48        71.6
-                               LUTGATE	         14        42.4
-                                LUTCCU	         34        100.0
-                                PFUREG	         33        100.0
+                                  LUT4	         97        49.7
+                               LUTGATE	         63        49.6
+                                LUTCCU	         34        50.0
+                                PFUREG	         33        50.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                          lab2_counter	          1        70.1
+                          lab2_counter	          1        42.1
 ---------------------------------------------------
 Report for cell lab2_counter
    Instance path: lab2_ei/lab2_scanning_inst/lab2_counter_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         47        70.1
-                               LUTGATE	         13        39.4
-                                LUTCCU	         34        100.0
-                                PFUREG	         33        100.0
+                                  LUT4	         82        42.1
+                               LUTGATE	         48        37.8
+                                LUTCCU	         34        50.0
+                                PFUREG	         33        50.0
+---------------------------------------------------
+Report for cell lab2_7_seg_decoder
+   Instance path: lab2_ei/lab2_7_seg_decoder_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         3.6
+                               LUTGATE	          7         5.5

@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Sep 15 01:58:43 2026
+Tue Sep 15 23:42:46 2026
 
 
 Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/lab2_ei_impl_1_lattice.synproj -logfile lab2_ei_impl_1_lattice.srp -gui -msgset C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/promote.xml 
@@ -159,18 +159,10 @@ INFO <35901018> - synthesis: ../source/impl_1/lab2_7_seg_decoder.sv(7): compilin
 		WIDTH                     32
 
 [Parameter Setting Section End]
+WARNING <35001771> - synthesis: Initial value found on net enable will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net enable will be ignored due to unrecognized driver type
 
 
-
-Combinational loop found : 1
-
- Net row_c[0] 
-
- Instance nreset_c_I_0 
-
- Net row_c_0__N_33 
-
- Instance \lab2_scanning_inst/i21 
 
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: nreset
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: sw1[3]
@@ -185,6 +177,7 @@ WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[3]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[2]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[1]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: col[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: enable
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[6]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[5]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[4]
@@ -196,7 +189,6 @@ WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[3]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[2]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[1]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: led[0]
-WARNING <35002062> - synthesis: Port rejected for I/O register mapping: clk
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: power[1]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: power[0]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row[3]
@@ -205,35 +197,35 @@ WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row[1]
 WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row[0]
 
 ################### Begin Area Report (lab2_ei)######################
-Number of register bits => 33 of 5280 (0 % )
-CCU2 => 17
-FD1P3XZ => 33
+Number of register bits => 66 of 5280 (1 % )
+CCU2 => 34
+FD1P3XZ => 66
 HSOSC_CORE => 1
-IB => 13
-LUT4 => 31
-OB => 18
+IB => 14
+LUT4 => 126
+OB => 17
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
-Number of even-length carry chains : 1
+Number of even-length carry chains : 2
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : clk_c, loads : 1
+  Net : clk, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : lab2_scanning_inst/lab2_counter_inst/n123, loads : 51
-  Net : lab2_scanning_inst/lab2_counter_inst/n73, loads : 20
-  Net : lab2_scanning_inst/lab2_counter_inst/n4, loads : 20
-  Net : lab2_scanning_inst/lab2_counter_inst/n600, loads : 18
-  Net : lab2_scanning_inst/lab2_counter_inst/n133[31], loads : 18
-  Net : lab2_scanning_inst/lab2_counter_inst/n133[29], loads : 17
-  Net : lab2_scanning_inst/lab2_counter_inst/n46, loads : 17
-  Net : lab2_scanning_inst/lab2_counter_inst/n598, loads : 17
-  Net : lab2_scanning_inst/lab2_counter_inst/n133[30], loads : 17
-  Net : lab2_scanning_inst/lab2_counter_inst/n133[27], loads : 16
+  Net : lab2_counter_inst/n225, loads : 65
+  Net : lab2_scanning_inst/lab2_counter_inst/n3, loads : 64
+  Net : lab2_counter_inst/n4, loads : 47
+  Net : lab2_scanning_inst/lab2_counter_inst/n4, loads : 47
+  Net : lab2_counter_inst/n40[31], loads : 19
+  Net : lab2_scanning_inst/lab2_counter_inst/n40[31], loads : 19
+  Net : lab2_counter_inst/n40[29], loads : 18
+  Net : lab2_counter_inst/n40[30], loads : 18
+  Net : lab2_counter_inst/n167[31], loads : 18
+  Net : lab2_counter_inst/n936, loads : 18
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -248,4 +240,4 @@ Peak Memory Usage: 89 MB
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: f5becf74736d1903d7b7d3502568bb5cad653698
+Checksum -- synthesis -- netlist: df7ffaf75451a03cf9579b7aeb3a7a1574faa69
