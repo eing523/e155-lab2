@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Sep 15 23:42:46 2026
+Wed Sep 16 02:05:11 2026
 
 
 Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/impl_1/lab2_ei_impl_1_lattice.synproj -logfile lab2_ei_impl_1_lattice.srp -gui -msgset C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/promote.xml 
@@ -199,6 +199,11 @@ INFO <35901018> - synthesis: ../source/impl_1/lab2_7_seg_decoder.sv(7): compilin
 		MAXCOUNT                  200000
 		WIDTH                     32
 
+	[Parameter Settings for Instance(s): lab2_scanning_inst]
+	(Module: lab2_scanning)
+		MAXCOUNT                  12000000
+		WIDTH                     32
+
 	[Parameter Settings for Instance(s): lab2_counter_inst]
 	(Module: lab2_counter)
 		MAXCOUNT                  12000000
@@ -274,9 +279,9 @@ Top 10 highest fanout non-clock nets:
   Net : lab2_scanning_inst/lab2_counter_inst/n4, loads : 47
   Net : lab2_counter_inst/n40[31], loads : 19
   Net : lab2_scanning_inst/lab2_counter_inst/n40[31], loads : 19
+  Net : lab2_counter_inst/n167[31], loads : 18
   Net : lab2_counter_inst/n40[29], loads : 18
   Net : lab2_counter_inst/n40[30], loads : 18
-  Net : lab2_counter_inst/n167[31], loads : 18
   Net : lab2_counter_inst/n936, loads : 18
 ################### End Clock Report ##################
 
@@ -295,7 +300,7 @@ Peak Memory Usage: 89 MB
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: df7ffaf75451a03cf9579b7aeb3a7a1574faa69
+Checksum -- synthesis -- netlist: 5ddad7c1a58c10f6d24902aa5c83d0c626f91c6
 
 
 

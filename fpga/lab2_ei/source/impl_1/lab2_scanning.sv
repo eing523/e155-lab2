@@ -3,19 +3,15 @@
 // Date of creation: 9/12/2026
 // Summary: Scanning module for E155 Lab 2, which asserts signals on each row one at a time, then observes the values of the columns.
 
-module lab2_scanning (
+module lab2_scanning #(parameter MAXCOUNT = 12_000_000, parameter WIDTH = 32)(
 	input logic clk,
 	input logic nreset,
 	input logic enable = 1'b1,
 	output logic clk_new,
 	output logic [3:0] row
 );
-
-	localparam WIDTH = 32; 
 	
 	logic [WIDTH-1:0] counter;
-
-	localparam MAXCOUNT = 12_000_000; 
 	
 	// Instantiate counter module
 	lab2_counter #(.MAXCOUNT(MAXCOUNT), .WIDTH(32)) lab2_counter_inst (.clk(clk), .nreset(nreset), .enable(enable), .counter(counter), .clk_new(clk_new));

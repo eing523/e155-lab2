@@ -13,7 +13,7 @@ Z1 dC:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei_tb
 vlab2_7_seg_decoder
 Z2 2C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_7_seg_decoder.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv
 Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z4 !s110 1789543486
+Z4 !s110 1789549665
 !i10b 1
 !s100 576>RjLMagWL==GI[Xfh93
 IV<jia9i1lWSf62mb9BZ^U0
@@ -29,7 +29,7 @@ Z6 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z7 !s108 1789543486.000000
+Z7 !s108 1789549665.000000
 Z8 !s107 C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_7_seg_decoder.sv|
 Z9 !s90 -reportprogress|300|-L|work|-sv|-L|pmi_work|-L|ovi_ice40up|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_7_seg_decoder.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_counter.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv|C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-csession=incr|
 !i113 0
@@ -115,15 +115,15 @@ R2
 R3
 R4
 !i10b 1
-!s100 4i9AAOUM[oPd:eQSLIBl;1
-IWX8Q5f]CV?EY^D=@dWecQ2
+!s100 5a[I34f]j]KI^?TOR`>530
+I>:Kz@2AEZFalA7hIg0b:i0
 S1
 R1
-w1789540961
+w1789549445
 8C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv
 FC:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning.sv
 !i122 0
-L0 6 28
+L0 6 24
 R5
 R6
 r1
@@ -139,7 +139,7 @@ Tqrun_opt
 !i145 1
 !i144 0
 R4
-VWU@I<>XE_kV:>>WS^9_JU1
+VmNZe^[aiT`dn@@Y0UeFSX3
 04 10 4 work lab2_ei_tb fast 0
 R0
 !s12f OEM25U6 

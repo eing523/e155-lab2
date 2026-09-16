@@ -571,3 +571,32 @@
 # Causality operation skipped due to absence of debug database file
 # End time: 01:55:08 on Sep 16,2026, Elapsed time: 0:12:44
 # Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 02:12:08 on Sep 16,2026
+# Loading sv_std.std
+# Loading work.lab2_scanning_tb(fast)
+# Loading work.lab2_scanning(fast)
+# Loading work.lab2_counter(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# PASSED! The output transitions (rows) behaves as desired at time: 40.
+# PASSED! The output transitions (rows) behaves as desired at time: 6000060.
+# PASSED! The output transitions (rows) behaves as desired at time: 126000060.
+# PASSED! The output transitions (rows) behaves as desired at time: 246000060.
+# PASSED! The output transitions (rows) behaves as desired at time: 366000060.
+# PASSED! The counter reset behaves as desired at time: 366000180.
+# PASSED! The counter enable behaves as desired at time: 606000320.
+# PASSED! The counter enable behaves as desired at time: 726000360.
+# ** Note: $stop    : C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning_tb.sv(115)
+#    Time: 726000460 ns  Iteration: 0  Instance: /lab2_scanning_tb
+# Break in Module lab2_scanning_tb at C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_scanning_tb.sv line 115
+# End time: 02:14:25 on Sep 16,2026, Elapsed time: 0:02:17
+# Errors: 0, Warnings: 0

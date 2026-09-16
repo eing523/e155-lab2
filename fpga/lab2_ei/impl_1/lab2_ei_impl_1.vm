@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2026.1.0.37.0
-// Netlist written on Tue Sep 15 23:42:47 2026
+// Netlist written on Wed Sep 16 02:05:11 2026
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/eing/documents/github/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_7_seg_decoder.sv"
@@ -152,7 +152,7 @@ module lab2_ei (input nreset, input [3:0]sw1, input [3:0]sw2, input [3:0]col,
     OB \seg_pad[2]  (.I(seg_c[2]), .O(seg[2]));
     OB \seg_pad[1]  (.I(seg_c[1]), .O(seg[1]));
     (* LSE_LINE_FILE_ID=27, LSE_LCOL=49, LSE_RCOL=158, LSE_LLINE=31, LSE_RLINE=31 *) \lab2_counter(MAXCOUNT=200000)  lab2_counter_inst (n225, 
-            n3, enable_c, clk, power_c, nreset_c);
+            n3, clk, power_c, nreset_c, enable_c);
     OB \seg_pad[0]  (.I(seg_c[0]), .O(seg[0]));
     OB \led_pad[3]  (.I(col_c_3__N_78), .O(led[3]));
     OB \led_pad[2]  (.I(col_c_2__N_79), .O(led[2]));
@@ -180,12 +180,12 @@ module lab2_ei (input nreset, input [3:0]sw1, input [3:0]sw2, input [3:0]col,
             .TRIM1(GND_net), .TRIM0(GND_net), .CLKHF(clk));
     defparam hf_osc.CLKHF_DIV = "0b00";
     defparam hf_osc.FABRIC_TRIME = "DISABLE";
-    (* LSE_LINE_FILE_ID=27, LSE_LCOL=16, LSE_RCOL=117, LSE_LLINE=34, LSE_RLINE=34 *) lab2_scanning lab2_scanning_inst (clk_new_scanner, 
-            nreset_c, {row_c}, n1383, counter[9], counter[14], n1367, 
-            counter[11], counter[12], n225, clk, n3, counter[13], 
-            counter[10]);
-    (* LSE_LINE_FILE_ID=27, LSE_LCOL=21, LSE_RCOL=52, LSE_LLINE=49, LSE_RLINE=49 *) lab2_7_seg_decoder lab2_7_seg_decoder_inst ({s}, 
-            {seg_c});
+    (* LSE_LINE_FILE_ID=27, LSE_LCOL=16, LSE_RCOL=117, LSE_LLINE=34, LSE_RLINE=34 *) lab2_scanning lab2_scanning_inst (n1367, 
+            {row_c}, clk_new_scanner, nreset_c, counter[10], counter[12], 
+            counter[14], n1383, counter[11], counter[13], n225, clk, 
+            n3, counter[9]);
+    (* LSE_LINE_FILE_ID=27, LSE_LCOL=21, LSE_RCOL=52, LSE_LLINE=49, LSE_RLINE=49 *) lab2_7_seg_decoder lab2_7_seg_decoder_inst ({seg_c}, 
+            {s});
     
 endmodule
 
@@ -193,22 +193,22 @@ endmodule
 // Verilog Description of module \lab2_counter(MAXCOUNT=200000) 
 //
 
-module \lab2_counter(MAXCOUNT=200000)  (output n225, input n3, input enable_c, 
-            input clk, output power_c, input nreset_c);
+module \lab2_counter(MAXCOUNT=200000)  (output n225, input n3, input clk, 
+            output power_c, input nreset_c, input enable_c);
     
     wire [31:0]count_state;
     (* is_clock=1 *) wire clk;
     
-    wire VCC_net, GND_net;
+    wire GND_net, VCC_net;
     wire [31:0]n40;
     wire [31:0]n167;
     
-    wire n2041, n908, n4, n920, n2056, n918, n2017, n922, n20, 
-        n73, n2020, n2047, n926, n916, n924, n2038, n2035, n23, 
-        n2032, n10, n4_adj_89, n8, n7, n22, n24, n2014, n1175, 
-        n930, n25, n936, n2065, n934, n2062, n932, n2059, n928, 
-        n2023, n2053, n2044, n914, n2029, n912, n2026, n910, 
-        n906;
+    wire n10, n24, n4, n908, n924, n2017, n73, n932, n2041, 
+        n2035, n8, n928, n2056, n2038, n922, n920, n918, n2014, 
+        n4_adj_89, n20, n7, n2029, n22, n23, n1175, n25, n936, 
+        n2062, n2065, n934, n2059, n930, n2053, n926, n2047, 
+        n2044, n916, n2032, n914, n912, n2026, n910, n2023, 
+        n2020, n906;
     
     (* LSE_LINE_FILE_ID=27, LSE_LCOL=49, LSE_RCOL=158, LSE_LLINE=31, LSE_RLINE=31 *) FD1P3XZ count_state__i0 (.D(n40[0]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(count_state[0]));
@@ -482,7 +482,7 @@ module \lab2_counter(MAXCOUNT=200000)  (output n225, input n3, input enable_c,
         .S1(n167[30]));
     defparam add_7_add_5_31.INIT0 = "0xc33c";
     defparam add_7_add_5_31.INIT1 = "0xc33c";
-    VLO i2 (.Z(GND_net));
+    VLO i1 (.Z(GND_net));
     (* lut_function="(!((B)+!A))" *) LUT4 i637_2_lut (.A(n167[18]), .B(n4), 
             .Z(n40[18]));
     defparam i637_2_lut.INIT = "0x2222";
@@ -578,7 +578,7 @@ module \lab2_counter(MAXCOUNT=200000)  (output n225, input n3, input enable_c,
     (* lut_function="(!((B)+!A))" *) LUT4 i620_2_lut (.A(n167[22]), .B(n4), 
             .Z(n40[22]));
     defparam i620_2_lut.INIT = "0x2222";
-    VHI i1 (.Z(VCC_net));
+    VHI i2 (.Z(VCC_net));
     (* LSE_LINE_FILE_ID=27, LSE_LCOL=49, LSE_RCOL=158, LSE_LLINE=31, LSE_RLINE=31 *) FD1P3XZ count_state__i21 (.D(n40[21]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(count_state[21]));
     defparam count_state__i21.REGSET = "RESET";
@@ -590,16 +590,16 @@ endmodule
 // Verilog Description of module lab2_scanning
 //
 
-module lab2_scanning (output clk_new_scanner, input nreset_c, output [3:0]row_c, 
-            input n1383, output \counter[9] , output \counter[14] , output n1367, 
-            output \counter[11] , output \counter[12] , input n225, input clk, 
-            output n3, output \counter[13] , output \counter[10] );
+module lab2_scanning (output n1367, output [3:0]row_c, output clk_new_scanner, 
+            input nreset_c, output \counter[10] , output \counter[12] , 
+            output \counter[14] , input n1383, output \counter[11] , output \counter[13] , 
+            input n225, input clk, output n3, output \counter[9] );
     
     wire [31:0]counter;
     (* is_clock=1 *) wire clk;
     
-    wire n10, n572, n881, n1257, n1371, n879, n1365, n4, n1253, 
-        n873, n845, n1251, n576, n570, n791, n1254;
+    wire n873, n572, n1251, n570, n10, n881, n1365, n1257, n879, 
+        n4, n1253, n845, n576, n791, n1254, n1371;
     
     (* lut_function="(A+(B+(C+(D))))" *) LUT4 i4_4_lut (.A(counter[25]), .B(counter[24]), 
             .C(counter[29]), .D(counter[27]), .Z(n10));
@@ -646,14 +646,14 @@ module lab2_scanning (output clk_new_scanner, input nreset_c, output [3:0]row_c,
     (* lut_function="(!(A+(B+!(C (D)))))" *) LUT4 i1268_4_lut_4_lut (.A(clk_new_scanner), 
             .B(n873), .C(n881), .D(nreset_c), .Z(row_c[2]));
     defparam i1268_4_lut_4_lut.INIT = "0x1000";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) lab2_counter lab2_counter_inst (counter[31], 
-            counter[30], n1257, n572, n225, clk_new_scanner, clk, 
-            n3, \counter[13] , counter[23], n1365, \counter[14] , 
-            n570, counter[21], counter[20], n576, n1251, \counter[11] , 
-            counter[7], \counter[12] , \counter[10] , counter[8], \counter[9] , 
-            counter[19], counter[29], counter[22], counter[27], counter[28], 
-            counter[26], counter[25], counter[24], counter[18], nreset_c, 
-            n791);
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) lab2_counter lab2_counter_inst (counter[31], 
+            counter[30], clk_new_scanner, counter[18], n1251, n572, 
+            \counter[10] , n1257, n225, clk, n3, \counter[13] , 
+            counter[19], \counter[14] , counter[27], n570, counter[25], 
+            counter[21], counter[20], \counter[12] , \counter[11] , 
+            counter[7], counter[8], \counter[9] , n576, counter[28], 
+            counter[22], counter[29], counter[23], counter[26], counter[24], 
+            n791, n1365, nreset_c);
     
 endmodule
 
@@ -661,36 +661,36 @@ endmodule
 // Verilog Description of module lab2_counter
 //
 
-module lab2_counter (output \counter[31] , output \counter[30] , output n1257, 
-            input n572, input n225, output clk_new_scanner, input clk, 
-            output n3, output \counter[13] , output \counter[23] , output n1365, 
-            output \counter[14] , output n570, output \counter[21] , output \counter[20] , 
-            output n576, output n1251, output \counter[11] , output \counter[7] , 
-            output \counter[12] , output \counter[10] , output \counter[8] , 
-            output \counter[9] , output \counter[19] , output \counter[29] , 
-            output \counter[22] , output \counter[27] , output \counter[28] , 
-            output \counter[26] , output \counter[25] , output \counter[24] , 
-            output \counter[18] , input nreset_c, output n791);
+module lab2_counter (output \counter[31] , output \counter[30] , output clk_new_scanner, 
+            output \counter[18] , output n1251, input n572, output \counter[10] , 
+            output n1257, input n225, input clk, output n3, output \counter[13] , 
+            output \counter[19] , output \counter[14] , output \counter[27] , 
+            output n570, output \counter[25] , output \counter[21] , output \counter[20] , 
+            output \counter[12] , output \counter[11] , output \counter[7] , 
+            output \counter[8] , output \counter[9] , output n576, output \counter[28] , 
+            output \counter[22] , output \counter[29] , output \counter[23] , 
+            output \counter[26] , output \counter[24] , output n791, output n1365, 
+            input nreset_c);
     
     wire [31:0]counter;
     (* is_clock=1 *) wire clk;
     
-    wire GND_net, VCC_net, n947, n571, n2077;
+    wire GND_net, VCC_net;
     wire [31:0]n167;
     
-    wire n73, n1507;
+    wire n73, n1, n2068, n2086, n943, n1506;
     wire [31:0]n40;
     
-    wire n2104, n953, n961, n2110, n14, n2113, n967, n2083, 
-        n1506, n1, n2, n2089, n1252, n969, n4, n965, n2107, 
-        n963, n2101, n959, n2098, n957, n2095, n955, n2092, 
-        n951, n2086, n949, n2080, n945, n943, n2074, n941, n2071, 
-        n939, n2068, n2050;
+    wire n951, n571, n14, n2092, n1507, n2080, n2050, n961, 
+        n2, n1252, n969, n2113, n2110, n967, n2101, n4, n965, 
+        n963, n2107, n2104, n959, n2098, n2089, n957, n2095, 
+        n955, n953, n949, n2083, n947, n945, n2077, n2074, n941, 
+        n2071, n939;
     
     (* lut_function="(A+(B+(C)))" *) LUT4 i2_3_lut (.A(\counter[31] ), .B(\counter[30] ), 
             .C(n572), .Z(n1257));
     defparam i2_3_lut.INIT = "0xfefe";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i0 (.D(n40[0]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i0 (.D(n40[0]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(counter[0]));
     defparam count_state__i0.REGSET = "RESET";
     defparam count_state__i0.SRMODE = "CE_OVER_LSR";
@@ -700,7 +700,7 @@ module lab2_counter (output \counter[31] , output \counter[30] , output n1257,
     (* lut_function="(A (B))" *) LUT4 i1_2_lut (.A(\counter[21] ), .B(\counter[20] ), 
             .Z(n1251));
     defparam i1_2_lut.INIT = "0x8888";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i1 (.D(n40[1]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i1 (.D(n40[1]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(counter[1]));
     defparam count_state__i1.REGSET = "RESET";
     defparam count_state__i1.SRMODE = "CE_OVER_LSR";
@@ -833,123 +833,123 @@ module lab2_counter (output \counter[31] , output \counter[30] , output n1257,
     (* lut_function="(!((B)+!A))" *) LUT4 i607_2_lut (.A(n167[0]), .B(n4), 
             .Z(n40[0]));
     defparam i607_2_lut.INIT = "0x2222";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i2 (.D(n40[2]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i2 (.D(n40[2]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(counter[2]));
     defparam count_state__i2.REGSET = "RESET";
     defparam count_state__i2.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i3 (.D(n40[3]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i3 (.D(n40[3]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(counter[3]));
     defparam count_state__i3.REGSET = "RESET";
     defparam count_state__i3.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i4 (.D(n40[4]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i4 (.D(n40[4]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(counter[4]));
     defparam count_state__i4.REGSET = "RESET";
     defparam count_state__i4.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i5 (.D(n40[5]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i5 (.D(n40[5]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(counter[5]));
     defparam count_state__i5.REGSET = "RESET";
     defparam count_state__i5.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i6 (.D(n40[6]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i6 (.D(n40[6]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(counter[6]));
     defparam count_state__i6.REGSET = "RESET";
     defparam count_state__i6.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i7 (.D(n40[7]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i7 (.D(n40[7]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[7] ));
     defparam count_state__i7.REGSET = "RESET";
     defparam count_state__i7.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i8 (.D(n40[8]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i8 (.D(n40[8]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[8] ));
     defparam count_state__i8.REGSET = "RESET";
     defparam count_state__i8.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i9 (.D(n40[9]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i9 (.D(n40[9]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[9] ));
     defparam count_state__i9.REGSET = "RESET";
     defparam count_state__i9.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i10 (.D(n40[10]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i10 (.D(n40[10]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[10] ));
     defparam count_state__i10.REGSET = "RESET";
     defparam count_state__i10.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i11 (.D(n40[11]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i11 (.D(n40[11]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[11] ));
     defparam count_state__i11.REGSET = "RESET";
     defparam count_state__i11.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i12 (.D(n40[12]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i12 (.D(n40[12]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[12] ));
     defparam count_state__i12.REGSET = "RESET";
     defparam count_state__i12.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i13 (.D(n40[13]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i13 (.D(n40[13]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[13] ));
     defparam count_state__i13.REGSET = "RESET";
     defparam count_state__i13.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i14 (.D(n40[14]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i14 (.D(n40[14]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[14] ));
     defparam count_state__i14.REGSET = "RESET";
     defparam count_state__i14.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i15 (.D(n40[15]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i15 (.D(n40[15]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(counter[15]));
     defparam count_state__i15.REGSET = "RESET";
     defparam count_state__i15.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i16 (.D(n40[16]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i16 (.D(n40[16]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(counter[16]));
     defparam count_state__i16.REGSET = "RESET";
     defparam count_state__i16.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i17 (.D(n40[17]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i17 (.D(n40[17]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(counter[17]));
     defparam count_state__i17.REGSET = "RESET";
     defparam count_state__i17.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i18 (.D(n40[18]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i18 (.D(n40[18]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[18] ));
     defparam count_state__i18.REGSET = "RESET";
     defparam count_state__i18.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i19 (.D(n40[19]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i19 (.D(n40[19]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[19] ));
     defparam count_state__i19.REGSET = "RESET";
     defparam count_state__i19.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i20 (.D(n40[20]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i20 (.D(n40[20]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[20] ));
     defparam count_state__i20.REGSET = "RESET";
     defparam count_state__i20.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i21 (.D(n40[21]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i21 (.D(n40[21]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[21] ));
     defparam count_state__i21.REGSET = "RESET";
     defparam count_state__i21.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i22 (.D(n40[22]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i22 (.D(n40[22]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[22] ));
     defparam count_state__i22.REGSET = "RESET";
     defparam count_state__i22.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i23 (.D(n40[23]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i23 (.D(n40[23]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[23] ));
     defparam count_state__i23.REGSET = "RESET";
     defparam count_state__i23.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i24 (.D(n40[24]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i24 (.D(n40[24]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[24] ));
     defparam count_state__i24.REGSET = "RESET";
     defparam count_state__i24.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i25 (.D(n40[25]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i25 (.D(n40[25]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[25] ));
     defparam count_state__i25.REGSET = "RESET";
     defparam count_state__i25.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i26 (.D(n40[26]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i26 (.D(n40[26]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[26] ));
     defparam count_state__i26.REGSET = "RESET";
     defparam count_state__i26.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i27 (.D(n40[27]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i27 (.D(n40[27]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[27] ));
     defparam count_state__i27.REGSET = "RESET";
     defparam count_state__i27.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i28 (.D(n40[28]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i28 (.D(n40[28]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[28] ));
     defparam count_state__i28.REGSET = "RESET";
     defparam count_state__i28.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i29 (.D(n40[29]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i29 (.D(n40[29]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[29] ));
     defparam count_state__i29.REGSET = "RESET";
     defparam count_state__i29.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i30 (.D(n40[30]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i30 (.D(n40[30]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[30] ));
     defparam count_state__i30.REGSET = "RESET";
     defparam count_state__i30.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ count_state__i31 (.D(n40[31]), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ count_state__i31 (.D(n40[31]), 
             .SP(n225), .CK(clk), .SR(n3), .Q(\counter[31] ));
     defparam count_state__i31.REGSET = "RESET";
     defparam count_state__i31.SRMODE = "CE_OVER_LSR";
@@ -1057,7 +1057,7 @@ module lab2_counter (output \counter[31] , output \counter[30] , output n1257,
             .Z(n40[31]));
     defparam i702_2_lut.INIT = "0x2222";
     VHI i2 (.Z(VCC_net));
-    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ clk_state (.D(n73), 
+    (* LSE_LINE_FILE_ID=30, LSE_LCOL=50, LSE_RCOL=151, LSE_LLINE=17, LSE_RLINE=17 *) FD1P3XZ clk_state (.D(n73), 
             .SP(n225), .CK(clk), .SR(n3), .Q(clk_new_scanner));
     defparam clk_state.REGSET = "RESET";
     defparam clk_state.SRMODE = "CE_OVER_LSR";
@@ -1068,7 +1068,7 @@ endmodule
 // Verilog Description of module lab2_7_seg_decoder
 //
 
-module lab2_7_seg_decoder (input [3:0]s, output [6:0]seg_c);
+module lab2_7_seg_decoder (output [6:0]seg_c, input [3:0]s);
     
     
     (* lut_function="(A (B (D)+!B !((D)+!C))+!A (B (C)+!B (C (D))))" *) LUT4 seg_c_1__I_0_4_lut (.A(s[0]), 

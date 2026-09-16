@@ -7,7 +7,7 @@ module lab2_scanning_tb();
 	logic [3:0] row;
 	logic enable;
 
-    lab2_scanning dut (
+    lab2_scanning #(.MAXCOUNT(12_000_000), .WIDTH(32)) dut (
 		.clk(clk),
 		.nreset(nreset),
 		.clk_new(clk_new),
