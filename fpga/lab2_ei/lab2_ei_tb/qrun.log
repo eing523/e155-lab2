@@ -948,3 +948,58 @@ run -all
 # Break in Module lab2_ei_tb at C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv line 110
 # End time: 02:09:33 on Sep 16,2026, Elapsed time: 0:01:47
 # Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   2
+#   Totals: Errors:   0, Warnings:   2
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:07:58 on Sep 16,2026
+# Loading sv_std.std
+# Loading work.lab2_ei_tb(fast)
+# Loading work.lab2_ei(fast)
+# Loading ovi_ice40up.HSOSC(fast)
+# Loading work.lab2_counter(fast)
+# Loading work.lab2_scanning(fast)
+# Loading work.lab2_counter(fast__1)
+# Loading work.lab2_7_seg_decoder(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# PASSED! The power mux testing behaves as desired at time: 50000.
+# PASSED! The power mux testing behaves as desired at time: 390000050000.
+# PASSED! The switch mux testing behaves as desired at time: 390000111000.
+# PASSED! The switch mux testing behaves as desired at time: 780000111000.
+# PASSED! The led driving functionality behaves as desired at time: 780000175000.
+# PASSED! The led driving functionality behaves as desired at time: 780000185000.
+# PASSED! The led driving functionality behaves as desired at time: 780000195000.
+# PASSED! The led driving functionality behaves as desired at time: 780000205000.
+# ** Note: $stop    : C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv(113)
+#    Time: 780000305 ns  Iteration: 0  Instance: /lab2_ei_tb
+# Break in Module lab2_ei_tb at C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv line 113
+add wave -position end  sim:/lab2_ei_tb/dut/clk_new_counter
+add wave -position end  sim:/lab2_ei_tb/dut/s
+restart -f
+# Loading work.lab2_ei_tb(fast)
+# Loading work.lab2_ei(fast)
+# Loading ovi_ice40up.HSOSC(fast)
+# Loading work.lab2_counter(fast)
+# Loading work.lab2_scanning(fast)
+# Loading work.lab2_counter(fast__1)
+# Loading work.lab2_7_seg_decoder(fast)
+run -all
+# PASSED! The power mux testing behaves as desired at time: 50000.
+# PASSED! The power mux testing behaves as desired at time: 390000050000.
+# PASSED! The switch mux testing behaves as desired at time: 390000111000.
+# PASSED! The switch mux testing behaves as desired at time: 780000111000.
+# PASSED! The led driving functionality behaves as desired at time: 780000175000.
+# PASSED! The led driving functionality behaves as desired at time: 780000185000.
+# PASSED! The led driving functionality behaves as desired at time: 780000195000.
+# PASSED! The led driving functionality behaves as desired at time: 780000205000.
+# ** Note: $stop    : C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv(113)
+#    Time: 780000305 ns  Iteration: 0  Instance: /lab2_ei_tb
+# Break in Module lab2_ei_tb at C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/source/impl_1/lab2_ei_tb.sv line 113
+# End time: 17:26:49 on Sep 16,2026, Elapsed time: 0:18:51
+# Errors: 0, Warnings: 0

@@ -26,16 +26,23 @@ Instance Path : lab2_counter_inst
                                LUT4        45           35.7
                               TOTAL        95
 ----------------------------------------------------------------------
+Report for cell lab2_7_seg_decoder.v1
+Instance Path : lab2_7_seg_decoder_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7            5.6
+                              TOTAL         7
+----------------------------------------------------------------------
 Report for cell lab2_scanning.v1
 Instance Path : lab2_scanning_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        17           50.0
                             FD1P3XZ        33           50.0
-                               LUT4        63           50.0
+                               LUT4        65           51.6
 SUB MODULES
                        lab2_counter         1
-                              TOTAL       114
+                              TOTAL       116
 ----------------------------------------------------------------------
 Report for cell lab2_counter.v1
 Instance Path : lab2_scanning_inst.lab2_counter_inst
@@ -43,12 +50,5 @@ Instance Path : lab2_scanning_inst.lab2_counter_inst
                                cell     count   Res Usage(%)
                                 FA2        17           50.0
                             FD1P3XZ        33           50.0
-                               LUT4        48           38.1
-                              TOTAL        98
-----------------------------------------------------------------------
-Report for cell lab2_7_seg_decoder.v1
-Instance Path : lab2_7_seg_decoder_inst
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         7            5.6
-                              TOTAL         7
+                               LUT4        42           33.3
+                              TOTAL        92

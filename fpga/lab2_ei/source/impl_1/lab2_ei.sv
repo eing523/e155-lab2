@@ -43,7 +43,7 @@ module lab2_ei(
 	assign power = (clk_new_counter == 1'b0) ? 2'b10 : 2'b01;
 	
 	// switch mux
-	assign s = (clk_new_scanner == 1'b0) ? sw1 : sw2;
+	assign s = (clk_new_counter == 1'b0) ? sw1 : sw2;
 	
 	// Instantiate seven-segment display decoder module
 	lab2_7_seg_decoder lab2_7_seg_decoder_inst(s, seg);

@@ -1,0 +1,20 @@
+#Start recording tcl command: 9/16/2026 15:48:19
+#Project Location: C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei; Project name: lab2_ei
+prj_open "C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_disable_source "C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei.pdc"
+prj_enable_source "C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei_scanner.pdc"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/eing/Documents/GitHub/e155-lab2/fpga/lab2_ei/lab2_ei_tb/lab2_ei_tb.spf"
+prj_run Export -impl impl_1
+#Stop recording: 9/16/2026 17:38:14

@@ -38,9 +38,12 @@ module lab2_ei_tb();
             $display("PASSED! The power mux testing behaves as desired at time: %0t.", $time);
         else 
             $error("FAILED! The power mux testing behaves incorrectly at time: %0t.", $time); 
-	#4_000_000;
-	#4_000_000;
-	#500; // tolerance
+	//#4_000_000;
+	//#4_000_000;
+	//#500; // tolerance
+	#120_000_000;
+	#120_000_000;
+	#150_000_000; // tolerance; doing math makes it in reality last 250080000 ns
 	
         assert (power == 2'b01)       // check outputs
             $display("PASSED! The power mux testing behaves as desired at time: %0t.", $time);
