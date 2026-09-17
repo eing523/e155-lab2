@@ -22,7 +22,7 @@ set ::bali::simulation::Para(MEMPATH) {}
 set ::bali::simulation::Para(UDOLIST) {}
 set ::bali::simulation::Para(ADDTOPLEVELSIGNALSTOWAVEFORM)  {1}
 set ::bali::simulation::Para(RUNSIMULATION)  {1}
-set ::bali::simulation::Para(SIMULATIONTIME)  {0}
+set ::bali::simulation::Para(SIMULATIONTIME)  {100}
 set ::bali::simulation::Para(SIMULATIONTIMEUNIT)  {ns}
 set ::bali::simulation::Para(SIMULATION_RESOLUTION)  {default}
 set ::bali::simulation::Para(NOGUI) {0}

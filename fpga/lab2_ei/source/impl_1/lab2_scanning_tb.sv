@@ -69,13 +69,13 @@ module lab2_scanning_tb();
 			end else begin
 				$error("FAILED! The output transitions (rows) behaves incorrectly at time: %0t.", $time); 
 			end
-	#20;
+	#100_000_000;
 
 
 // check that reset feature works
 	#80;
 	nreset = 0;
-    #20 nreset = 1;
+    #200_000_000 nreset = 1;
 	
 	assert (row == 4'b0000 && clk_new == 1'b0)       // check outputs
             $display("PASSED! The counter reset behaves as desired at time: %0t.", $time);
@@ -102,8 +102,8 @@ module lab2_scanning_tb();
 		#20;
 		enable = 1;
 		
-		#120_000_000; // waiting till next row change - if row changes, then it's working.
-		#20;
+		#120_000_000; // to see a change in the row value
+		#120_000_000;
 		
 		assert (row == 4'b0100) begin       // check outputs
 				$display("PASSED! The counter enable behaves as desired at time: %0d.", $time);
@@ -111,7 +111,8 @@ module lab2_scanning_tb();
 				$error("FAILED! The counter enable behaves incorrectly at time: %0d.", $time); 
 			end
 
-	
+		#120_000_000;
+		
     #100 $stop;
   end
 endmodule
